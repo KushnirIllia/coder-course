@@ -1,0 +1,315 @@
+/* * Fonts import */
+/* https://fonts.google.com */
+/* https://webfonts.pro */
+/* https://transfonter.org (ttf to woff, woff2) */
+
+/*  &display=swap */
+/*  for cyrillic:    &subset=cyrillic-ex */
+
+/* * Fonts local import */
+
+/* * Icons Fonts */
+/* https://www.iconfinder.com/ */
+/* https://icomoon.io */
+/* * Reset styles */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	color: var(--second-color);
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* default size: 16px*/
+}
+body {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 32px;
+	overflow-x: hidden;
+}
+.wrapper {
+	min-height: 100%;
+	/* overflow: hidden; */
+}
+/* ---------------------------------- */
+
+:root {
+	--third-color: #5bccde;
+	--second-color: #486a6f;
+	--main-color: #678c92;
+}
+
+/** z-index: auto; */
+/*
+Кожен елемент може знаходиися як нижче так і вище інших, 
+розміщення по z-осі керується z-index
+? position відмінне від static
+*/
+
+/* ---------------------------------- */
+/** position: static; */
+/* top,left,right,bottom,z-index - НЕ працюють */
+/* 
+Статичне положення обʼєкта (за замовчуванням) 
+*/
+/* ---------------------------------- */
+/** position: relative; */
+/* top,left,right,bottom,z-index - працюють */
+/* 
+Положення елемента відносно його початкового місця в коді.
+Стає в нову чергу вищу за основну(у якій усі ел relative) 
+*/
+/*? Властивості позиціювання вказувати через  px, %, інші од. */
+.main > *:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+.about {
+	display: flex;
+	justify-content: center;
+	padding: 235px 0px 100px 0px;
+	background: linear-gradient(42.43deg, #c6dbff 0%, #e1ebfa 52.25%);
+}
+.about > *:not(:last-child) {
+	margin-right: 193px;
+}
+.about__image {
+	position: relative;
+	width: 324px;
+	max-height: 420;
+}
+.about__item {
+	border-radius: 16px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.about__item_secondary {
+	width: 220px;
+	max-height: 285px;
+	position: absolute;
+	bottom: -78px;
+	right: -78px;
+}
+.about__content {
+	max-width: 500px;
+	padding: 20px;
+}
+.about__content > *:not(:last-child) {
+	margin-bottom: 20px;
+}
+.section-header__tag {
+	color: var(--third-color);
+}
+.section-header__title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 48px;
+}
+.about__text {
+	color: var(--main-color);
+	padding: 0px 20px 0px 0px;
+}
+
+/* ---------------------------------- */
+/** position: absolute; */
+/* top,left,right,bottom,z-index - працюють */
+/*
+Елемент вириривається з черги і 
+позиціонується щодо його батьківського елементу з position: relative
+Не впливає на інші ел
+1) Обʼєкт втрачає "тіло", і висить у повітрі.
+2) Інші ел займають його місце
+3) Обʼюєкт стає display: inline 
+4) Позиціонується відносно батьківського елемента position: relative
+5) Необхідно супроводжувати властивостями (двома) із top,left,right,bottom
+*/
+
+/* ---------------------------------- */
+/** position: fixed; */
+/* top,left,right,bottom,z-index - працюють */
+/*
+Елемент вириривається з черги
+Фіксується і не скролиться
+Не впливає на інші ел
+1) Обʼєкт втрачає "тіло", і висить у повітрі.
+2) Інші ел займають його місце
+3) Обʼюєкт стає display: inline 
+4) Позиціонується відносно відносно вікна браузера
+5) Необхідно супроводжувати властивостями (двома) із top,left,right,bottom
+*/
+.button {
+	color: #f4f7ff;
+	background: var(--second-color);
+	padding: 10px 25px;
+	font-weight: 700;
+	cursor: pointer;
+	display: inline-block;
+	min-width: 240px;
+	text-align: center;
+	text-transform: capitalize;
+}
+.button_rounded {
+	border-radius: 5px;
+}
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px 10px;
+	margin: 0px auto;
+	background: var(--main-color);
+	z-index: 100;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header__button {
+	min-width: auto;
+}
+.header__logo {
+	margin: 0px 180px 0px 0px;
+}
+
+.header__info {
+	display: flex;
+	max-width: 1200px;
+}
+.menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.menu__icon {
+}
+.icon-menu {
+}
+.menu__body {
+}
+.menu__list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.menu__item:not(:last-child) {
+	margin-right: 50px;
+}
+.menu__link {
+	text-transform: capitalize;
+}
+.logo__title {
+	position: relative;
+	display: inline-block;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 44px;
+	text-transform: capitalize;
+	padding: 0px 0px 0px 50px;
+}
+.logo__title::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: var(--second-color);
+	display: inline-block;
+}
+
+/* ---------------------------------- */
+/** position: sticky; */
+/* top,left,right,bottom,z-index - працюють */
+/*
+Це гібридне поєднання значень static та fixed.
+Спочатку елемент поводиться як static
+але після того, як скролл доходить до його кордону, він стає
+fixed та прилипає до зазначеної позиції top або bottom.
+*/
+.call {
+	margin: 0px 40px;
+	padding: 77px 0;
+	border-top: 1px solid var(--second-color);
+	border-bottom: 1px solid var(--second-color);
+	background-color: #fff;
+}
+.call > * {
+	display: inline-block;
+	vertical-align: baseline;
+}
+.call__title {
+	margin: 0px 630px 0px 0px;
+	font-size: 36px;
+	line-height: 48px;
+	font-weight: 700;
+	position: sticky;
+	top: 70px;
+}
+.call__controls {
+}
+.button {
+}
+.content {
+	position: relative;
+}
+.article {
+	margin: 0px 0px 0px 50px;
+}
+.block {
+	width: 80px;
+	height: 80px;
+	border: 1px solid #000;
+	display: inline-block;
+	margin: 0px 10px 0px 0px;
+}
+.block_1 {
+	position: relative;
+	top: 80px;
+	background: var(--third-color);
+	left: 20px;
+	z-index: 2;
+}
+.block_2 {
+	position: relative;
+	top: 90px;
+	background: var(--second-color);
+	border: 1px solid red;
+}
+.block_3 {
+	background: var(--main-color);
+	position: absolute;
+	left: 50%;
+  top: 0;
+}
