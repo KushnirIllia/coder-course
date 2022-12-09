@@ -1,0 +1,228 @@
+/* * Fonts import */
+/* https://fonts.google.com */
+/* https://webfonts.pro */
+/* https://transfonter.org (ttf to woff, woff2) */
+
+/*  &display=swap */
+/*  for cyrillic:    &subset=cyrillic-ex */
+
+/* * Fonts local import */
+
+/* * Icons Fonts */
+/* https://www.iconfinder.com/ */
+/* https://icomoon.io */
+/* * Reset styles */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* default size: 16px*/
+}
+body {
+	line-height: 1; /* default: 1*/
+	/* font-family, color */
+	/* font-size */
+	overflow-x: hidden;
+}
+.wrapper {
+	min-height: 100%;
+	/* overflow: hidden; */
+	padding: 50px;
+}
+/* ---------------------------------- */
+
+.block {
+	/* За замовчуванням */
+	position: static;
+	/* 
+  top
+  left
+  right
+  bottom
+  z-index
+  */
+	position: relative;
+}
+.block__item {
+	padding: 15px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+.block__item_color_green {
+	background-color: #7a956b;
+}
+
+.block__item_color_purple {
+	background-color: #77608d;
+	/* margin-right: 20px;  */
+
+	position: sticky;
+	top: 0;
+}
+
+.block__item_color_brown {
+	background-color: #794f45;
+	/* position: absolute;
+	top: 0;
+	z-index: 2; */
+}
+/* ---------------------------------- */
+/** z-index: auto; */
+/*
+Кожен елемент може знаходиися як нижче так і вище інших, 
+розміщення по z-осі керується z-index
+? position відмінне від static
+*/
+
+/* ---------------------------------- */
+/** position: static; */
+/* top,left,right,bottom,z-index - НЕ працюють */
+/* 
+Статичне положення обʼєкта (за замовчуванням) 
+*/
+/* ---------------------------------- */
+/** position: relative; */
+/* top,left,right,bottom,z-index - працюють */
+/* 
+Положення елемента відносно його початкового місця в коді.
+Стає в нову чергу вищу за основну(у якій усі ел relative) 
+*/
+/*? Властивості позиціювання вказувати через  px, %, інші од. */
+
+/* ---------------------------------- */
+/** position: absolute; */
+/* top,left,right,bottom,z-index - працюють */
+/*
+Елемент вириривається з черги і 
+позиціонується щодо його батьківського елементу з position: relative
+Не впливає на інші ел
+1) Обʼєкт втрачає "тіло", і висить у повітрі.
+2) Інші ел займають його місце
+3) Обʼюєкт стає display: inline 
+4) Позиціонується відносно батьківського елемента position: relative
+5) Необхідно супроводжувати властивостями (двома) із top,left,right,bottom
+*/
+
+/* ---------------------------------- */
+/** position: fixed; */
+/* top,left,right,bottom,z-index - працюють */
+/*
+Елемент вириривається з черги
+Фіксується і не скролиться
+Не впливає на інші ел
+1) Обʼєкт втрачає "тіло", і висить у повітрі.
+2) Інші ел займають його місце
+3) Обʼюєкт стає display: inline 
+4) Позиціонується відносно відносно вікна браузера
+5) Необхідно супроводжувати властивостями (двома) із top,left,right,bottom
+*/
+
+/* ---------------------------------- */
+/** position: sticky; */
+/* top,left,right,bottom,z-index - працюють */
+/*
+Це гібридне поєднання значень static та fixed.
+Спочатку елемент поводиться як static
+але після того, як скролл доходить до його кордону, він стає
+fixed та прилипає до зазначеної позиції top або bottom.
+*/
+
+/*
+.how-it-works {
+
+}
+.how-it-works__image {
+  position: relative;
+}
+.how-it-works__text {
+  color: #77608d;
+  font-size: 40px;
+  font-weight: 700;
+  position: relative;
+  top: 200px;
+  z-index: 1;
+} 
+*/
+
+/* .block__item {
+  padding: 15px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin: -20px 0px 0px 0px;
+}
+.block__item_color_green {
+  background-color: #7a956b;
+  position: relative;
+  z-index: 2;
+}
+
+.block__item_color_purple {
+  background-color: #77608d;
+  position: relative;
+}
+.block__item_color_purple p {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  background-color: yellow;
+  color: #000;
+  padding: 10px;
+}
+.block__item_color_brown {
+  background-color: #794f45;
+  position: relative;
+} */
+
+/* Практика */
+
+.list__item {
+	position: relative;
+	padding: 0px 0px 0px 20px;
+}
+.list__item::before {
+	content: "";
+	border-radius: 50%;
+	background-color: red;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+.list__item:not(:last-child) {
+	margin-bottom: 10px;
+}
