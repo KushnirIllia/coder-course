@@ -311,5 +311,40 @@ fixed та прилипає до зазначеної позиції top або 
 	background: var(--main-color);
 	position: absolute;
 	left: 50%;
-  top: 0;
+	top: 0;
+}
+
+/* ---------------------------------- */
+.works {
+}
+.works__container {
+	position: relative;
+	max-width: 1200px;
+	margin: 0px auto;
+}
+.works__container::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: url("../img/works/feature.svg") 20% 100% no-repeat;
+	z-index: -1;
+}
+.works__left-side {
+	position: relative;
+}
+.works__image {
+	display: inline-block;
+}
+
+.works__counter {
+	display: inline;
+	position: absolute;
+	top: 30%;
+	left: 0%;
+	font-size: 150px;
+	font-weight: 700;
+	color: pink;
 }
