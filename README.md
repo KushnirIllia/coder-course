@@ -34,4 +34,4 @@ images(jpg, png, gif, webp, svg)
 BEM methodology
 
 ## Lesson_11
-position: relative, absolute, static, sticky
+position: relative, absolute, static, sticky, fixed, z-index
