@@ -1,0 +1,207 @@
+/* * Fonts import */
+/* https://fonts.google.com */
+/* https://webfonts.pro */
+/* https://transfonter.org (ttf to woff, woff2) */
+
+/*  &display=swap */
+/*  for cyrillic:    &subset=cyrillic-ex */
+
+/* * Fonts local import */
+
+/* * Icons Fonts */
+/* https://www.iconfinder.com/ */
+/* https://icomoon.io */
+/* * Reset styles */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* default size: 16px*/
+}
+body {
+	overflow-x: hidden;
+	line-height: 1; /* default: 1*/
+	/* font-family, color */
+	/* font-size */
+	background: #454545;
+}
+.wrapper {
+	min-height: 100%;
+	padding: 50px;
+}
+/* ---------------------------------- */
+
+/* Селектор атрибутів */
+
+/* Точний пошук */
+[class="block"] {
+	color: red;
+}
+
+/* Пошук закінчення .com */
+[href$=".com"] {
+	color: blue;
+}
+[href$=".ua"] {
+	color: blue;
+	background: yellow;
+}
+
+/* Пошук початку */
+[href^="http"] {
+	color: pink;
+}
+
+/* Пошук слова  */
+[class~="pot"] {
+	color: darkcyan;
+}
+
+/* Пошук слова через дефіс */
+[class|="body-about"] {
+	background: darkslategrey;
+}
+
+/* Пошук будь-якого входження */
+[class*=":"] {
+	color: midnightblue;
+}
+
+[class*="__container"] {
+	max-width: 1200px;
+	margin: 0px auto;
+}
+
+/* ---------------------------------- */
+.block {
+	background-color: rgb(121, 79, 69, 0.5);
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+.block__item {
+	background-color: #7a956b;
+	width: 200px;
+	height: 200px;
+	/* 
+	position: relative;
+	top: 5%;
+	left: 5%; 
+  */
+}
+/* ---------------------------------- */
+
+/*! transform: translate(0%, 0%); */
+/* z-index працює */
+/* 
+  Зсув елемент на нове місце, переміщаючи відносно
+  початкового положення об'єкта вправо та вниз,
+  використовуючи координати X та Y.
+  Залежить в самого елемента
+	Записується так translate (x,y).
+*/
+.block__item_translate {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translate(-50%, 0);
+	z-index: 3;
+}
+/* ---------------------------------- */
+
+/*! transform: scale(1, 1); */
+/*
+  Масштабує елементи, роблячи їх більшими або меншими.
+  scale(horizontal, vertical)
+*/
+.block__item_scale {
+	transform: scale(1, 0.5);
+}
+
+/*! transform: rotate(45deg); */
+/* Повертає елемент. */
+.block__item_rotate {
+	/* transform: rotateX(50deg); */
+	/* transform: rotate(10deg); */
+}
+
+/*! transform: skew  */
+/* Деформує (згин) елементи. */
+.block__item_skew {
+	transform: skew(-50deg, 20deg);
+}
+/* Записи обʼєднуються */
+
+/*! transform-origin */
+
+.block__item {
+	/* transform-origin: bottom right; */
+	/* transform-origin: 100% 10%; */
+}
+
+.block {
+	perspective: 400px;
+	transform-style: preserve-3d;
+}
+
+/*! Встановлення глибини і зміна точки початка координат. */
+/* 
+	perspective: 400px;
+	perspective-origin: 0 0;
+*/
+
+/* 3D */
+/*! потрібно встановлювати perspective 
+  translate3d,
+  scale3d,
+  rotate3d
+  ...
+*/
+.block__item {
+	/*? transform: translate3d(0%, 0%, 0%);
+  більш плавний
+  */
+	/* transform: translate3d(10%, 10%, 50px); */
+	transform: rotateX(0deg) rotateY(100deg);
+  /* backface-visibility: hidden; */
+}
+
+/*! Задає як будуть відображатися дочірні обʼекти в 3D */
+/* 
+  transform-style: flat; -- звичайне відображення
+	transform-style: preserve-3d; -- пронизує батьківський обʼєкт 
+*/
+
+/*! Відображення зворотньої сторони */
+/* backface-visibility: hidden; */
