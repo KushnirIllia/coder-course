@@ -1,15 +1,12 @@
 # Content:
 
 ## Lesson_2
-будівельні і контентні теги html
 building and content html tags
 
 ## Lesson_3
-як писати css (перше обнулення)
 how to write css (first reset)
 
 ## Lesson_4
-підключення шрифтів, робота з текстом
 connecting fonts, working with text
 
 ## Lesson_5
@@ -30,8 +27,10 @@ background
 images(jpg, png, gif, webp, svg)
 
 ## Lesson_10
-Методологія BEM
 BEM methodology
 
 ## Lesson_11
 position: relative, absolute, static, sticky, fixed, z-index
+
+## Lesson_12
+Transform translate, scale, rotate, skew. 3D transformation. transform-origin. perspective
