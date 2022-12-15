@@ -1,0 +1,135 @@
+/* * Fonts import */
+/* https://fonts.google.com */
+/* https://webfonts.pro */
+/* https://transfonter.org (ttf to woff, woff2) */
+
+/*  &display=swap */
+/*  for cyrillic:    &subset=cyrillic-ex */
+
+/* * Fonts local import */
+
+/* * Icons Fonts */
+/* https://www.iconfinder.com/ */
+/* https://icomoon.io */
+
+/* * Reset styles */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* default size: 16px*/
+}
+body {
+	overflow-x: hidden; /* for 	position: sticky */
+	line-height: 1; /* default: 1*/
+	/* font-family */
+	/* color */
+	/* font-size */
+	background: #484848;
+}
+.wrapper {
+	min-height: 100%;
+}
+
+[class*="__container"] {
+	max-width: 1000px;
+	margin: 0px auto;
+	padding: 80px;
+}
+
+/* ---------------------------------- */
+/* 
+.practice {
+	background: darkslateblue;
+} */
+.practice__container {
+	perspective: 600px;
+}
+.card-practice {
+	background: #fff;
+	border-radius: 10px;
+	max-width: 200px;
+	transform: translate(5%) rotateY(10deg) skew(3deg);
+	transition: all 0.8s linear;
+	position: relative;
+	z-index: 2;
+}
+.card-practice:hover {
+	transform: rotateY(5deg) skew(0deg) translate(0%);
+}
+.card-practice__wrapper {
+	padding: 10px 20px;
+	overflow: hidden;
+}
+.card-practice__wrapper > * {
+	min-width: 100%;
+}
+.card-practice__wrapper > *:not(:last-child) {
+	margin-bottom: 60px;
+}
+.card-practice__title {
+	font-size: 46px;
+	font-weight: 700;
+	line-height: 1.4;
+	text-align: center;
+}
+.card-practice__text {
+	font-size: 26px;
+	font-weight: 500;
+	text-align: left;
+	line-height: 1;
+}
+.card-practice__link {
+	color: darkcyan;
+	font-size: 25px;
+	text-decoration: underline;
+	line-height: 1;
+	display: inline-block;
+	text-align: left;
+}
+
+/* ---------------------------------- */
+.star {
+	perspective: 300px;
+	perspective-origin: top center;
+	padding: 50px;
+}
+.star__text {
+	transform: rotateX(20deg) ;
+	transition: all 0.8s linear;
+}
+
+.star__text:hover {
+	transform: rotateX(10deg) translateX(0px);
+}

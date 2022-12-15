@@ -80,7 +80,7 @@ p {
 	background-color: #7a956b;
 }
 .content__rotate:hover {
-	transform: rotate(0deg);
+	transform: rotate(-360deg);
 }
 
 /* skew */
@@ -89,7 +89,7 @@ p {
 	background-color: #794f45;
 }
 .content__skew:hover {
-	transform: skew(10deg, 0deg);
+	transform: skew(5deg, 5deg);
 }
 /* matrix */
 .content__matrix {
@@ -105,7 +105,8 @@ p {
 /* transform-origin */
 .content__transform-origin {
 	background-color: #794f45;
-	transform-origin: 0 0;
+	transform-origin: 0;
+
 	transform: rotate(0deg);
 }
 .content__transform-origin:hover {
@@ -138,8 +139,6 @@ p {
 	background-color: #7a956b;
 	transform: rotateX(50deg);
 }
-.content__perspective:hover {
-}
 
 /* translate3D */
 .content__translate3D {
@@ -169,8 +168,8 @@ p {
 }
 
 /* matrix3d */
-.content__matrix3d {
-}
+/* .content__matrix3d {
+} */
 
 /* Multi3D */
 .content__multi3d {
@@ -205,8 +204,8 @@ p {
 }
 
 /* Flip */
-.flip {
-}
+/* .flip {
+} */
 .flip__body {
 	position: relative;
 	width: 150px;
