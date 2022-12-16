@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>TITLE</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header"></header>
+      <main class="main">
+        <!-- Б.Е.М -->
+
+        <!-- Блок -->
+        <!--
+        Незалежний обʼєкт
+        header, footer, блок текста з картинкою, ...
+
+        Не впливає на оточення
+
+        Імʼя клас:
+        1) Імʼя повинно відповідати вмісту або конструкції
+        2) Ангійська мова (латиниця)
+        3) нижній регістр
+        4) декілька слів розділяються дефісом
+
+        Можна вкаладати безліч БЕМ блоків один в одного
+        -->
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi
+          neque voluptatem rerum facere provident architecto. Maiores ea quod
+          possimus non, repudiandae eius ullam dolore iusto tempore deserunt
+          eveniet nihil!
+        </p>
+
+        <div class="item">
+          <div class="who-we-are">I am alike BEM block</div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi
+          neque voluptatem rerum facere provident architecto. Maiores ea quod
+          possimus non, repudiandae eius ullam dolore iusto tempore deserunt
+          eveniet nihil!
+        </p>
+
+        <!-- Елемент -->
+        <!--
+          Залежний обʼєкт від свого БЕМ блока
+          Завжди знаходиться в середині свого БЕМ блока
+          Може впливати на зовнішні обʼєкти
+
+          Імʼя клас:
+          0) Починається з імені першого батьківського блока і відділяється двома (__)
+          1) Імʼя повинно відповідати вмісту або конструкції
+          Відповідає на "Що це?"
+          2) Ангійська мова (латиниця)
+          3) нижній регістр
+          4) декілька слів розділяються дефісом
+          5) Жодної іерархії
+
+          БЕМ елемент можна вкладати в інші БЕМ елементи свого БЕМ блока
+        -->
+
+        <div class="who-we-are">
+          <!-- це БЕМ елемент -->
+          <h1 class="who-we-are__title">Title</h1>
+          <!-- це БЕМ елемент -->
+          <p class="who-we-are__text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quis
+            neque quasi culpa molestiae odio totam nam laudantium eius
+            architecto iste dolorem, quae optio, enim fugiat earum beatae
+            deserunt nemo!
+            <!-- це БЕМ елемент (правильно )-->
+            <a href="#" class="who-we-are__link">Who we are link</a>
+            <!-- це БЕМ елемент (НЕ правильно )-->
+            <a href="#" class="who-we-are-text__link">Who we are link</a>
+            <!-- це БЕМ елемент (НЕ правильно )-->
+            <a href="#" class="who-we-are__text-link">Who we are link</a>
+
+            <!-- це БЕМ блок link -->
+            <a href="" class="link">I am link</a>
+          </p>
+          <!-- це БЕМ блок link -->
+          <a href="" class="link">I am link</a>
+        </div>
+
+        <!-- Приклади -->
+
+        <div class="article">
+          <h2 class="article__title">title</h2>
+          <p class="article__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem,
+            nobis.
+          </p>
+          <img src="img" alt="img" class="article__image image image_size_s" />
+        </div>
+
+        <div class="testimonials">
+          <div class="testimonials__container">
+            <div class="testimonials__header section-header">
+              <h6 class="section-header__subtitle"></h6>
+              <h3 class="section-header__title"></h3>
+              <p class="section-header__paragraph"></p>
+            </div>
+            <div class="testimonials__body"></div>
+          </div>
+        </div>
+
+        <div class="contacts">
+          <h2 class="contacts__title"></h2>
+          <div class="contacts__text"></div>
+          <div class="about">
+            <!-- Правильно -->
+            <p class="about__text"></p>
+            <!-- НЕ правильно -->
+            <p class="contacts__text"></p>
+          </div>
+        </div>
+
+        <div class="promise">
+          <div class="promise__tag"></div>
+          <h2 class="promise__title"></h2>
+          <div class="promise__items">
+            <div class="promise__item">
+              <div class="promise__icon"></div>
+              <div class="promise__body">
+                <div class="promise__label"></div>
+                <div class="promise__text"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="practice-advice">
+          <div class="practice-advice__header section-header">
+            <h6 class="section-header__subtitle"></h6>
+            <h3 class="section-header__title"></h3>
+            <p class="section-header__paragraph"></p>
+          </div>
+          <div class="practice-advice__body">
+            <div class="card">
+              <div class="card__image">
+                <img src="" alt="" />
+              </div>
+              <h4 class="card__label"></h4>
+              <p class="card__text"></p>
+              <div class="card__box">
+                <h3 class="card__price"></h3>
+                <p class="card__subprice"></p>
+              </div>
+              <p class="card__text"></p>
+              <a href="#" class="button">Btn</a>
+              <ul class="card__list">
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+              </ul>
+
+            </div>
+            <div class="card card_new">
+              <div class="card__image">
+                <img src="" alt="" />
+              </div>
+              <h4 class="card__label"></h4>
+              <p class="card__text"></p>
+              <div class="card__box">
+                <h3 class="card__price"></h3>
+                <p class="card__subprice"></p>
+              </div>
+              <p class="card__text"></p>
+              <a href="#" class="button">Btn</a>
+              <ul class="card__list">
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card__image">
+                <img src="" alt="" />
+              </div>
+              <h4 class="card__label"></h4>
+              <p class="card__text"></p>
+              <div class="card__box">
+                <h3 class="card__price"></h3>
+                <p class="card__subprice"></p>
+              </div>
+              <p class="card__text"></p>
+              <a href="#" class="button">Btn</a>
+              <ul class="card__list">
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+                <li class="card__item"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Модифікатор -->
+        <!--
+        Вносить зміни для БЕМ блока або БЕМ елемента
+
+        Імʼя клас:
+          0) Додається як ще один клас БЕМ блока або БЕМ елемента одним (_)
+          1) Імʼя повинно відповідати доданим модифікаціям.
+          Відповідає на "Який?"
+          2) Ангійська мова (латиниця)
+          3) нижній регістр
+          4) декілька слів розділяються дефісом
+          5) Жодної іерархії
+
+        Є булевий модифікатор(закінчення -ed): _disabled, _focused
+        Є ключ: _secondary, _large
+        Є ключ-значення модифікатор: _size_m, _color_red, _theme_islands
+        -->
+
+        <div class="who-we-are">
+          I am who we are
+          <div class="who-we-are__title">I am title</div>
+        </div>
+
+        <div class="who-we-are who-we-are_color_purple">
+          I am who we are (але не зовсім)
+          <div class="who-we-are__title who-we-are__title_margin-font">
+            I am title (але не зовсім)
+          </div>
+        </div>
+
+        <div class="subscription">
+          <div class="subscription__container">
+            <div class="subscription__header">
+              <div class="section-header">
+                <h6 class="section-header__subtitle"></h6>
+                <h3 class="section-header__title"></h3>
+                <p class="section-header__paragraph"></p>
+              </div>
+            </div>
+            <div class="subscription__body">
+              <div class="subscription__card">
+                <h6 class="subscription__title"></h6>
+                <h5 class="subscription__price"></h5>
+                <a href="#" class="subscription__button button"
+                  >FIND YOUR BOX</a
+                >
+              </div>
+              <div class="subscription__card subscription__card_blue">
+                <h6 class="subscription__title"></h6>
+                <h5 class="subscription__price"></h5>
+                <a href="#" class="subscription__button">FIND YOUR BOX</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="subscription subscription_without-header">
+          <div class="subscription__container">
+            <div class="subscription__header section-header">
+              <h6 class="section-header__subtitle"></h6>
+              <h3 class="section-header__title"></h3>
+              <p class="section-header__paragraph"></p>
+            </div>
+            <div class="subscription__body">
+              <div class="subscription__card">
+                <h6 class="subscription__title"></h6>
+                <h5 class="subscription__price"></h5>
+                <a href="#" class="subscription__button">FIND YOUR BOX</a>
+              </div>
+              <div class="subscription__card subscription__card_theme_blue">
+                <h6 class="subscription__title"></h6>
+                <h5 class="subscription__price"></h5>
+                <a href="#" class="subscription__button">FIND YOUR BOX</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Мікси -->
+        <!--
+          Суміш БЕМ блока і БЕМ елемента для одного обʼєкта
+          При цьому БЕМ елемент може бути в ролі БЕМ модифікатора
+        -->
+
+        <div class="who-we-are">Who we are block</div>
+
+        <div class="main-page">
+          <!-- Одночасно БЕМ блок і БЕМ елемент -->
+          <div class="who-we-are main-page__who-we-are">Who we are block</div>
+        </div>
+
+        <div class="contacts-page">
+          <div class="who-we-are">Who we are block</div>
+        </div>
+
+        <div class="promise">
+          <div class="promise__header section-header">
+            <h6 class="section-header__subtitle"></h6>
+            <h3 class="section-header__title"></h3>
+            <p class="section-header__paragraph"></p>
+          </div>
+          <div class="promise__items">
+            <div class="promise__item item-promise">
+              <img src="#" alt="article" class="item-promise__icon" />
+              <div class="item-promise__body">
+                <div class="item-promise__title"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>

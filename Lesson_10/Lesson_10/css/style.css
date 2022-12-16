@@ -1,0 +1,120 @@
+/* * Fonts import */
+/* https://fonts.google.com */
+/* https://webfonts.pro */
+/* https://transfonter.org (ttf to woff, woff2) */
+
+/*  &display=swap */
+/*  for cyrillic:    &subset=cyrillic-ex */
+
+/* * Fonts local import */
+
+/* * Reset styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+img {
+  vertical-align: top;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 16px; /* default size: 16px*/
+}
+body {
+  line-height: 1; /* default: 1*/
+  /* font-family, color */
+  /* font-size */
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+/* ---------------------------------- */
+
+p {
+  background-color: #77608d;
+  padding: 15px;
+  color: #fff;
+}
+
+/* Блок 
+  Незалежний обʼєкт      
+  Не впливає на оточення
+*/
+
+/* Правильно (незалежність) */
+.who-we-are {
+  background-color: #7a956b;
+  color: #fff;
+  /* Можна */
+  padding: 15px;
+  /*! Не можна */
+  margin: 0px 0px 15px 0px;
+}
+/* Не правильно (залежність) */
+.item .who-we-are {
+  background-color: #7A956B;
+}
+
+
+
+/* .who-we-are {
+} */
+.who-we-are__title {
+}
+
+.who-we-are__title {
+  margin: 0px 0px 20px 0px;
+}
+.who-we-are__title_margin-font {
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+.who-we-are_purple {
+  background: purple;
+}
+
+.promise {
+}
+.promise__tag {
+}
+.promise__title {
+}
+.promise__items {
+}
+.promise__item {
+}
+.promise__icon {
+}
+.promise__body {
+}
+.promise__label {
+}
+.promise__text {
+}
