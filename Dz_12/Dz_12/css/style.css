@@ -177,93 +177,35 @@ body {
 } */
 
 /* ---------------------------------- */
+:root {
+	--main-color: rgb(135, 16, 16);
+}
 .car {
-}
-.car-body {
-	width: 800px;
-	height: 120px;
-	background: rgb(189, 189, 189);
+	width: 1000px;
+	display: block;
 	margin: 0px auto;
+	/* height: 300px; */
+}
+.car__shape {
 	position: relative;
-	border-bottom: 2px solid #000;
 }
-[class*="car-body__element"] {
-	width: 220px;
-	height: 50px;
-	background: rgb(189, 189, 189);
-	position: absolute;
-}
-.car-body__element_1 {
-	transform: rotate(-10deg);
-	transform-origin: top left;
-}
-.car-body__element_2 {
-	left: 220px;
-	height: 200px;
-	transform: translate(-21px, -11%) rotate(-45deg);
-	transform-origin: top left;
-}
-.car-body__element_3 {
-	top: -177px;
-	height: 200px;
-	left: 354px;
-}
-.car-body__element_4 {
-	right: 0;
-	transform-origin: top right;
-	top: 0px;
-	transform: rotate(38deg);
-	width: 287px;
-	height: 150px;
-}
-.car-body__element_5,
-.car-body__element_6 {
-	width: 180px;
-	height: 80px;
-	overflow: hidden;
-	position: relative;
-	left: 100px;
-	bottom: -32%;
-}
-.car-body__wheel-bg_left,
-.car-body__wheel-bg_right {
-	width: 180px;
-	height: 160px;
-	border-radius: 50%;
-	background: #000;
-	transform: skew(-10deg) translate(-2px, 0%);
-	/* position: relative;
-	bottom: 0; */
-}
-
-.car-body__element_6 {
-	position: absolute;
-	bottom: 0;
-	right: 100px;
-	left: unset;
-}
-.car-body__wheel-bg_right {
-	transform: skew(6deg);
-}
-
-.car-wheel {
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	background: rgb(104, 104, 104);
-	position: absolute;
-	z-index: 3;
-	bottom: 0;
-	left: 115px;
-	transform: translate(3px, 60%);
-}
-.car-wheel::after {
+.car__shape::before {
 	content: "";
-	width: 80%;
-	height: 80%;
-	transform: translate(13%, 13%);
-	position: absolute;
-	border: 4px dashed #000;
-	background: transparent;
-	border-radius: 50%;
+	/* position: absolute;
+	top: 0;
+	left: 0; */
+	display: block;
+	border-bottom: 200px solid var(--main-color);
+	border-left: 340px solid transparent;
+	border-right: 200px solid transparent;
+	width: 800px;
+	
+	/* transform: translate(50%,0px); */
+}
+.car__shape::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 200px;
+	background: var(--main-color);
 }
