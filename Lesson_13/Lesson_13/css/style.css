@@ -1,0 +1,128 @@
+/* * Fonts import */
+/* https://fonts.google.com */
+/* https://webfonts.pro */
+/* https://transfonter.org (ttf to woff, woff2) */
+
+/*  &display=swap */
+/*  for cyrillic:    &subset=cyrillic-ex */
+
+/* * Fonts local import */
+
+/* * Icons Fonts */
+/* https://www.iconfinder.com/ */
+/* https://icomoon.io */
+
+/* * Reset styles */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* default size: 16px*/
+}
+body {
+	overflow-x: hidden; /* for 	position: sticky */
+	line-height: 1; /* default: 1*/
+	/* font-family */
+	/* color */
+	/* font-size */
+	background: rgb(32, 32, 32);
+}
+.wrapper {
+	min-height: 100%;
+	padding: 50px;
+}
+
+[class*="__container"] {
+	/* max-width: 1200px; */
+	margin: 0px auto;
+}
+/* ---------------------------------- */
+/** transition */
+/*
+CSS переходи або CSS transitions можуть застосовуватись до всіх елементів і навіть до псевдоелементів.
+Використовуються для пожвавлення нашої верстки. Що в свою чергу призводить до покращення взаємодії з 
+користувачем, зазвичай шляхом приємної анімованої реакції на його дії.
+Наприклад, наведення та натискання на кнопку. Також властивості transition можна використовувати 
+для побудови нескладних сценаріїв анімації. Фактично, CSS переходи забезпечують зміну значень 
+інших властивостей з певною анімацією та сценарієм. Всю цю магію можна описати універсальним СЅЅ властивістю 
+transition, або рядом наступних окремих властивостей:
+*/
+.link {
+	color: yellow;
+	font-size: 14px;
+
+	transition-duration: 0s;
+}
+.link_anim {
+	/*
+	? transition-duration:
+	Визначає проміжок часу, протягом якого має здійснюватись перехід. 
+	Власне - тут ми вказуємо час за яке одне значення якості переходить (анімується) в інше.
+	Властивість не успадковується.
+	*/
+	transition-duration: 0.2s, 0.5s;
+
+	/* 
+	? transition-property: 
+	Містить назву CSS-властивостей, до яких буде використано ефект переходу. 
+	Значення властивості може містити як одну властивість, так і список властивостей через кому.
+	Властивість не успадковується.
+	*/
+	transition-property: color, font-size;
+
+	/*
+	? transition-delay
+	Затримка виконання переходу. Дозволяє зробити так, щоб зміна якості відбувалася нe
+	миттєво, а з деякою затримкою. Час затримки переходу вказується 
+	у секундах або мілісекундах. 
+	Властивість не успадковується. 
+	*/
+	transition-delay: 0s, 0.5s;
+
+	/*
+	? transition-timing-function
+	Задає стиль нашого переходу, тобто якийсь сценарій, за яким здійсняться анімація.
+	
+	steps(4, start/end)
+	*/
+	transition-timing-function: ease, ease;
+
+	/** Universal */
+	transition: all 0.3s ease 0s;
+}
+
+.link:hover {
+	color: red;
+	font-size: 20px;
+}
