@@ -84,7 +84,8 @@ transition, або рядом наступних окремих властиво
 
 	transition-duration: 0s;
 }
-.link_anim {
+/*! Put real class  */
+.link_transition {
 	/*
 	? transition-duration:
 	Визначає проміжок часу, протягом якого має здійснюватись перехід. 
@@ -125,4 +126,77 @@ transition, або рядом наступних окремих властиво
 .link:hover {
 	color: red;
 	font-size: 20px;
+}
+
+/* .button {
+	display: inline-block;
+	color: #fff;
+	background-color: green;
+	border-radius: 10px;
+	padding: 10px 15px;
+	box-shadow: 0px 5px 1px 0px #000;
+	transition: all 0.3s ease 0s;
+}
+.button:hover {
+	box-shadow: 0px 2px 1px 0px #000;
+	transform: translate3d(0px, 4px, 0px);
+} */
+
+.menu {
+	overflow: hidden;
+	padding: 10px;
+}
+.menu:hover .menu__list,
+.menu:hover .menu__item {
+	transform: translate3d(0px, 0px, 0px);
+	opacity: 1;
+	transition-duration: 0.6s;
+}
+.menu:hover .menu__list {
+	transition-delay: 0s;
+}
+.menu:hover .menu__item:nth-child(1) {
+	transition-delay: 0.2s;
+}
+.menu:hover .menu__item:nth-child(2) {
+	transition-delay: 0.4s;
+}
+.menu:hover .menu__item:nth-child(3) {
+	transition-delay: 0.6s;
+}
+.menu:hover .menu__item:nth-child(4) {
+	transition-delay: 0.8s;
+}
+.menu__list {
+	background-color: #794f45;
+	padding: 15px;
+	transform: translate3d(-100%, 0px, 0px);
+	transition: all 0.5s ease 0s;
+	opacity: 0;
+	overflow: hidden;
+	transition-delay: 1s;
+}
+.menu__item {
+	transform: translate3d(-100%, 0px, 0px);
+	transition: all 0.6s ease 0s;
+}
+
+.menu__item:nth-child(1) {
+	transition-delay: 0s;
+}
+.menu__item:nth-child(2) {
+	transition-delay: 0.2s;
+}
+.menu__item:nth-child(3) {
+	transition-delay: 0.4s;
+}
+.menu__item:nth-child(4) {
+	transition-delay: 0.6s;
+}
+
+.menu__item:not(:last-child) {
+	margin-bottom: 20px;
+}
+.menu__link {
+	color: #fff;
 }
