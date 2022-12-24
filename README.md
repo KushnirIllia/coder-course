@@ -34,3 +34,8 @@ position: relative, absolute, static, sticky, fixed, z-index
 
 ## Lesson_12
 Transform translate, scale, rotate, skew. 3D transformation. transform-origin. perspective
+
+## Lesson_13
+Learning animation and transition and their relative properties.
+
+animation/transition -name, animation/transition -duration, animation/transition -timing-function, animation-iteration-count, animation-direction, animation-fill-mode, animation-play-state
