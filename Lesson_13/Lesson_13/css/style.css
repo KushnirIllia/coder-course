@@ -206,31 +206,97 @@ transition, або рядом наступних окремих властиво
 Іншими словами, використання конструкції animation та @keyframes дозволяє нам створювати більш складні 
 сценарії анімацій. 
 */
-
-.block {
-	width: 200px;
-	height: 200px;
-	background-color: #7a956b;
+/*! Put real class  */
+.animation {
 	/*
+		? animation-name
 		Визначає список анімацій (ключових кадрів), що застосовуються до елемента. 
 		Можна вказати через кому. Причому пріоритет останній запис.
 	*/
 	animation-name: somename;
 	/*
+		? animation-duration
 		Відповідає за тривалість анімації.
 	*/
 	animation-duration: 1s;
+	/*
+		? animation-timing-function
+		ease linear cubic-bezier ...
+		Встановлює сценарій розвитку анімації між ключовими кадрами.
+	*/
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	/*
+		? animation-delay
+		Відповідає за затримку перед відтворенням.
+		*/
+	animation-delay: 2s;
+	/*
+		? animation-iteration-count
+		! infinite drob number
+		Відповідає за повтор відтворення ключових кадрів.
+	*/
+	animation-iteration-count: 1;
+	/*
+		? animation-direction
+		! alternate normal reverse ...
+		Визначає напрямок та тип відтворення ключових кадрів.
+	*/
+	animation-direction: alternate;
+	/*
+		? animation-fill-mode
+		! forwards - залишиться на кінцевому (100%)
+		! backwards - повернеться на початкове значення
+		! none
+		Визначає, які значення анімовани х css властивостей застосовуються до об'єкта після завершення анімації.
+	*/
+	animation-fill-mode: forwards;
+	/*
+		? animation-play-state
+		! running paused
+		Дозволяє запускати або зупиняти анімацію за подією.
+	*/
+	animation-play-state: running;
 }
-/* .block:hover {
-	animation-name: somename;
 
+.block {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	background-color: #7a956b;
+	animation-name: somename;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-delay: 0s;
+	animation-direction: alternate;
+}
+.block:hover {
+	animation-play-state: paused;
+
+}
+/* .block::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #7a956b;
+	transform: rotate(-45deg);
+	top: 0;
+	left: 0;
 } */
+
 
 @keyframes somename {
 	0% {
 		transform: translate3d(0px, 0px, 0px);
+		/* transform: rotate(0deg); */
+	}
+	50% {
+		border-radius: 50%;
+		background-color: #794f45;
 	}
 	100% {
 		transform: translate3d(100px, 0px, 0px);
+		/* transform: rotate(360deg); */
 	}
 }
