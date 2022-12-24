@@ -155,18 +155,7 @@ transition, або рядом наступних окремих властиво
 .menu:hover .menu__list {
 	transition-delay: 0s;
 }
-.menu:hover .menu__item:nth-child(1) {
-	transition-delay: 0.2s;
-}
-.menu:hover .menu__item:nth-child(2) {
-	transition-delay: 0.4s;
-}
-.menu:hover .menu__item:nth-child(3) {
-	transition-delay: 0.6s;
-}
-.menu:hover .menu__item:nth-child(4) {
-	transition-delay: 0.8s;
-}
+
 .menu__list {
 	background-color: #794f45;
 	padding: 15px;
@@ -174,7 +163,7 @@ transition, або рядом наступних окремих властиво
 	transition: all 0.5s ease 0s;
 	opacity: 0;
 	overflow: hidden;
-	transition-delay: 1s;
+	transition-delay: 0.8s;
 }
 .menu__item {
 	transform: translate3d(-100%, 0px, 0px);
@@ -198,5 +187,50 @@ transition, або рядом наступних окремих властиво
 	margin-bottom: 20px;
 }
 .menu__link {
+	padding: 6px 4px;
 	color: #fff;
+}
+
+/* ---------------------------------- */
+
+/* 
+* animation
+Як і CSS властивість плавних переходів transition, про який ми говорили в попередньому уроці, 
+властивість animation покликана зробити нашу верстку динамічнішою, пожвавити її для кращої взаємодії 
+з користувачем та створення WOW ефекту.
+
+Але на відміну від CSS переходів, створення анімації базується на ключових кадрах @keyframes,
+які дозволяють автоматично відтворювати та повторювати ефекти протягом заданого часу, а також зупиняти 
+анімацію за певною подією.
+
+Іншими словами, використання конструкції animation та @keyframes дозволяє нам створювати більш складні 
+сценарії анімацій. 
+*/
+
+.block {
+	width: 200px;
+	height: 200px;
+	background-color: #7a956b;
+	/*
+		Визначає список анімацій (ключових кадрів), що застосовуються до елемента. 
+		Можна вказати через кому. Причому пріоритет останній запис.
+	*/
+	animation-name: somename;
+	/*
+		Відповідає за тривалість анімації.
+	*/
+	animation-duration: 1s;
+}
+/* .block:hover {
+	animation-name: somename;
+
+} */
+
+@keyframes somename {
+	0% {
+		transform: translate3d(0px, 0px, 0px);
+	}
+	100% {
+		transform: translate3d(100px, 0px, 0px);
+	}
 }
