@@ -1,0 +1,113 @@
+/* * Fonts import */
+/* https://fonts.google.com */
+/* https://webfonts.pro */
+/* https://transfonter.org (ttf to woff, woff2) */
+
+/*  &display=swap */
+/*  for cyrillic:    &subset=cyrillic-ex */
+
+/* * Fonts local import */
+
+/* * Reset styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+img {
+  vertical-align: top;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 16px; /* default size: 16px*/
+}
+body {
+  line-height: 1; /* default: 1*/
+  /* font-family */
+  /* font-size */
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 30px;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  padding: 50px;
+}
+/* --------------- */
+
+.block {
+  background: url('../img/bgimage.jpg') 0 0 / contain repeat-x;
+  color: #be2222;
+  padding: 20px;
+}
+.block > *:not(:last-child) {
+  margin-bottom: 25px;
+}
+.block__title {
+  font-size: 50px;
+}
+.block__subtitle {
+  font-size: 35px;
+}
+/* .block__text {
+} */
+.block__button {
+  padding: 10px 50px 10px 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 325%;
+  border-radius: 4px;
+  background: #ff3f3a url('../img/arrowicon.png') 95% 50% no-repeat;
+  cursor: pointer;
+}
+
+/* Растрова графіка -- пікселями */
+
+/* PNG - фото з прозорим фоном (багато важить) */
+/* JPG - фото з білим фоном (краще піддається зжиманню) (менше важить) */
+/* GIF */
+
+/* Векторна графіка -- з кривих ліній */
+
+/* SVG - код, криві лінії (дизайнерська робота) */
+/* WebP - найкращий формат картинок (заміняє png, jpg, gif) */
+
+.items {
+  /* height: 206px; */
+  display: flex;
+}
+.item {
+  /* vertical-align: top; */
+  background-color: #794f45;
+  padding: 30px;
+  color: #fff;
+  width: 33.333%;
+  /* height: 100%; */
+  /* overflow: auto; */
+}
