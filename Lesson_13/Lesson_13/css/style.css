@@ -238,7 +238,7 @@ transition, або рядом наступних окремих властиво
 	animation-iteration-count: 1;
 	/*
 		? animation-direction
-		! alternate normal reverse ...
+		! alternate  reverse ...
 		Визначає напрямок та тип відтворення ключових кадрів.
 	*/
 	animation-direction: alternate;
