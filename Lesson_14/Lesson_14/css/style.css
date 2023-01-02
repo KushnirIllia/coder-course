@@ -1,0 +1,127 @@
+/* * Fonts import */
+/* https://fonts.google.com */
+/* https://webfonts.pro */
+/* https://transfonter.org (ttf to woff, woff2) */
+
+/*  &display=swap */
+/*  for cyrillic:    &subset=cyrillic-ex */
+
+/* * Fonts local import */
+
+/* * Icons Fonts */
+/* https://www.iconfinder.com/ */
+/* https://icomoon.io */
+
+/* * Reset styles */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* default size: 16px*/
+}
+body {
+	overflow-x: hidden; /* for 	position: sticky */
+	line-height: 1; /* default: 1*/
+	/* font-family */
+	/* color */
+	/* font-size */
+	background-color: #333;
+}
+.wrapper {
+	min-height: 100%;
+	padding: 30px;
+}
+
+[class*="__container"] {
+	/* max-width: 1200px; */
+	margin: 0px auto;
+}
+
+/* ---------------------------------- */
+
+/** Flexbox
+- це цілий модуль, що містить у собі набір властивостей 
+та їх значень як для батька flex-контейнера, так і для його дочірніх 
+елементів flex-елементів. Основною перевагою гнучкої FLEX розмітки є 
+можливість змінювати ширину/висоту простір навколо і порядок 
+flex-елементів, щоб найкраще заповнити доступний простір flex-контейнера.
+*/
+
+/** <!-- flex-container --> */
+.block {
+	border: 10px solid #794f45;
+	display: flex;
+	height: 500px;
+	/* 
+	? flex-wrap 
+	nowrap wrap wrap-reverse
+	Визначає чи зможуть flex-елементи переміщатися на наступні рядки, 
+	коли перестають поміщатися всередині flex-контейнера. 
+	*/
+	flex-wrap: wrap;
+
+	/*
+	? justify-content
+	space-evenly/between center flex-start/end
+	Визначає вирівнювання вздовж основної осі 
+	(напрямок залежить від значення якості flex-direction).
+	*/
+	justify-content: center;
+
+	/* 
+	? align-items
+	! stretch - займає все вільне місце 
+	center flex-start/end 
+	Визначає вирівнювання вздовж поперечної осі 
+	(напрямок залежить від значення якості flex-direction).
+	*/
+	align-items: stretch;
+
+
+	/*
+	? flex-direction 
+	Встановлює основну вісь, таким чином визначає напрямок 
+	flex-елементів, розташованих у flex-контейнері. */
+	flex-direction: column;
+}
+
+/** <!-- flex-elem --> */
+.block__element {
+	border: 10px solid #7a956b;
+	padding: 20px;
+	font-size: 30px;
+	color: #fff;
+}
+.block__element_2 {
+}
