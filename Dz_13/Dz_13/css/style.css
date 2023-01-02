@@ -131,43 +131,47 @@ body {
 .section-header__tag {
 	color: var(--third-color);
 }
+
 .section-header__title {
 	font-weight: 700;
 	font-size: 36px;
 	line-height: 48px;
-	animation: title-inifite 4s ease 0s 1 alternate;
+	padding: 10px 20px;
+	border: 3px solid transparent;
+	border-radius: 10px;
+	animation: title-ilumination 1s ease 0s infinite normal;
 }
-@keyframes title-inifite {
+@keyframes title-ilumination {
 	0% {
-		background-color: #fff;
-		border-radius: 10px;
-	}
-	25% {
-		background-color: rgb(208, 105, 105);
+		border: 3px dashed rgb(64, 255, 0);
 	}
 	50% {
-transform: rotate(-45deg);
-	}
-	75% {
+		border: 3px solid transparent;
+		background-color: rgb(30, 33, 44, 0.1);
 	}
 	100% {
+		border: 3px dashed rgb(64, 255, 0);
 	}
 }
 .about__text {
 	color: var(--main-color);
 	padding: 0px 20px 0px 0px;
 	/* transition: transform 1s ease-in-out 0s; */
-	animation: some 1s ease 0s 1 normal forwards;
+	animation: some 1s ease 0s 1 normal backwards;
+	font-size: 20px;
 }
 @keyframes some {
 	0% {
-		transform: translate3d(100%, 0px, 0px) rotate(45deg);
+		transform: translate3d(100%, 100%, 0px);
 		opacity: 0;
 	}
 	50% {
+		transform: translate3d(10px, 10px, 0px);
+		opacity: 0.7;
 	}
 	100% {
-		/* opacity: 1; */
+		transform: translate3d(0px, 0px, 0px);
+		opacity: 1;
 	}
 }
 
@@ -184,6 +188,11 @@ transform: rotate(-45deg);
 	margin: 0px 0px 60px 0px;
 	font-size: 46px;
 	font-weight: 700;
+	transition: background-color 0.3s linear 0s;
+	background-color: #fff;
+}
+.social-posts__title:hover {
+	background-color: rgb(209, 108, 108, 0.2);
 }
 .social-posts__content {
 	margin: 0px auto 90px auto;
@@ -196,9 +205,36 @@ transform: rotate(-45deg);
 .social-posts__footer {
 	text-align: center;
 }
-
+@keyframes post-social {
+	0% {
+		top: -50px;
+	}
+	75% {
+		top: 20px;
+	}
+	100% {
+		top: 0;
+	}
+}
+@keyframes post-social-upper {
+	0% {
+	}
+	75% {
+		top: -20px;
+	}
+	100% {
+		top: 0;
+	}
+}
 .post-social {
 	display: inline-block;
+	position: relative;
+	top: -50px;
+	animation: post-social 1.3s ease 3s 1 normal forwards;
+}
+.post-social_position_upper {
+	top: 50px;
+	animation: post-social-upper 1.3s ease 3s 1 normal forwards;
 }
 .post-social__wrapper {
 	max-width: 312px;
@@ -230,21 +266,68 @@ transform: rotate(-45deg);
 	background-color: #f5f8ff;
 }
 .benefits__container {
-	/* z-index: 3; */
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
+	gap: 100px;
+	/* animation: benefits-container-inner 1s 1 linear 0s normal forwards; */
 }
-.benefits__content > *:not(:last-child) {
-	margin-right: 30px;
+@keyframes benefits-container-inner {
+	0% {
+		gap: 100px;
+	}
+	50% {
+		gap: 0;
+	}
+	100% {
+		gap: 100px;
+	}
 }
+
 .benefits__block {
 	background-color: #fff;
 	padding: 35px 40px;
 	box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+	position: relative;
 }
+/* .benefits__block:first-child {
+	animation: benefits-block-first 1s 1 linear 1s normal forwards;
+}
+.benefits__block:last-child {
+	animation: benefits-block-last 1s 1 linear 1s normal forwards;
+} */
 .benefits__block > * {
 	max-width: 250px;
+}
+@keyframes benefits-block-first {
+	0% {
+		left: 0;
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: translate3d(0px, 100%, 0px) rotate(0deg);
+	}
+	99% {
+		transform: rotate(10deg);
+	}
+	100% {
+		left: calc(100% - 340px);
+	}
+}
+@keyframes benefits-block-last {
+	0% {
+		right: 0;
+		transform: rotate(-10deg);
+	}
+	50% {
+		transform: translate3d(0px, -100%, 0px) rotate(-10deg);
+	}
+	99% {
+		transform: rotate(-10deg);
+	}
+	100% {
+		right: calc(100% - 340px);
+	}
 }
 .benefits__block > *:not(:last-child) {
 	margin-bottom: 20px;
@@ -268,10 +351,23 @@ transform: rotate(-45deg);
 .benefits__title::after {
 	content: "";
 	display: block;
-	width: 50%;
+	width: 0%;
 	height: 2px;
 	background: #e74040;
 	margin: 20px 0px 0px 0px;
+	animation: benefits-title-line 1s 1 cubic-bezier(0.075, 0.82, 0.165, 1) normal
+		forwards;
+}
+@keyframes benefits-title-line {
+	0% {
+		width: 0;
+	}
+	50% {
+		width: 70%;
+	}
+	100% {
+		width: 50%;
+	}
 }
 .benefits__text {
 	font-weight: 400;
@@ -356,8 +452,17 @@ transform: rotate(-45deg);
 .card__price {
 	color: #ff4242;
 	font-weight: 700;
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 150%;
+	animation: card-price 0.5s 1 ease 9s normal backwards;
+}
+@keyframes card-price {
+	50% {
+		font-size: 28px;
+	}
+	70% {
+		font-size: 13px;
+	}
 }
 .card__author {
 	font-weight: 400;
