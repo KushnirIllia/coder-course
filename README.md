@@ -39,3 +39,8 @@ Transform translate, scale, rotate, skew. 3D transformation. transform-origin. p
 Learning animation and transition and their relative properties.
 
 animation/transition -name, animation/transition -duration, animation/transition -timing-function, animation-iteration-count, animation-direction, animation-fill-mode, animation-play-state
+
+## Lesson_14
+Learning display flex and flex properties.
+
+justify-content, align-items, flex-direction
