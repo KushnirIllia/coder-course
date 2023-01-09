@@ -206,3 +206,33 @@ flex-елементів, щоб найкраще заповнити доступ
 .block__element:nth-child(4) {
 	order: 1;
 }
+
+/* ---------------------------------- */
+.article {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	font-size: 0;
+	/* border: 2px solid #fff; */
+	row-gap: 20px;
+	margin: 0px -10px;
+}
+.article__element {
+	padding: 0px 10px;
+	flex: 0 0 33.3333%;
+}
+.article__content {
+	background-color: #77608d;
+	padding: 20px;
+	height: 100%;
+	font-size: 30px;
+	color: #fff;
+}
+
+
+/* 
+	Home assigment: https://flexboxfroggy.com
+	зверстати 2 кусокчки з макетів за допомогою flex
+
+*/
