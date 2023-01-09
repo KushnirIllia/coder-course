@@ -82,7 +82,9 @@ flex-елементів, щоб найкраще заповнити доступ
 /*! change to real class */
 .flex-container {
 	border: 10px solid #794f45;
+
 	display: flex;
+
 	height: 500px;
 	/* width: 200px; */
 	/* 
@@ -141,6 +143,7 @@ flex-елементів, щоб найкраще заповнити доступ
 .block {
 	border: 10px solid #794f45;
 	display: flex;
+	flex-wrap: wrap;
 	gap: 0px;
 }
 
@@ -158,7 +161,7 @@ flex-елементів, щоб найкраще заповнити доступ
 	Перевизначає для конкретного flex-елемента вирівнювання вздовж 
 	поперечної осі (напрямок залежить від значення якості flex-direction).
 	*/
-	align-self: flex-end;
+	align-self: center;
 
 	/* 
 	? flex-basis
@@ -184,4 +187,22 @@ flex-елементів, щоб найкраще заповнити доступ
 	*/
 	/* flex-shrink: 1; */
 	flex: 1 0 200px;
+}
+
+/* 
+? order
+Управляє порядком, в якому розташовуються флекс-елементи всередині
+флекс-контейнера.
+*/
+.block__element:nth-child(1) {
+	order: 2;
+}
+.block__element:nth-child(2) {
+	order: 3;
+}
+.block__element:nth-child(3) {
+	order: 4;
+}
+.block__element:nth-child(4) {
+	order: 1;
 }
