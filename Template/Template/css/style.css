@@ -53,6 +53,7 @@ html {
 body {
 	overflow-x: hidden; /* for 	position: sticky */
 	line-height: 1; /* default: 1*/
+	background-color: #303030;
 	/* font-family */
 	/* color */
 	/* font-size */
