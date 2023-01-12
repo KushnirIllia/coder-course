@@ -1,0 +1,161 @@
+/* * Fonts import */
+/* https://fonts.google.com */
+/* https://webfonts.pro */
+/* https://transfonter.org (ttf to woff, woff2) */
+
+/*  &display=swap */
+/*  for cyrillic:    &subset=cyrillic-ex */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
+/* * Fonts local import */
+
+/* * Icons Fonts */
+/* https://www.iconfinder.com/ */
+/* https://icomoon.io */
+
+/* * Reset styles */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* default size: 16px*/
+}
+body {
+	overflow-x: hidden; /* for 	position: sticky */
+	line-height: 1; /* default: 1*/
+	background-color: #f5f5f5;
+	font-family: "Roboto";
+	color: var(--main-color);
+	font-size: 16px;
+	font-weight: 900;
+}
+.wrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+[class*="__container"] {
+	max-width: 1020px;
+	padding: 0px 15px;
+	margin: 0px auto;
+}
+/* ---------------------------------- */
+:root {
+	--main-color: #02133c;
+	--second-color: #fff;
+	--main-title-size: 36px;
+	--second-title-size: 19px;
+	--text-title-size: 12px;
+}
+/* ---------------------------------- */
+.header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: #2f2f35;
+}
+.header__menu {
+}
+.menu {
+}
+.header__upper {
+	padding: 26px 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/* ---------------------------------- */
+.header__logo {
+}
+.logo-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.logo-header__img {
+	width: 40px;
+	height: 40px;
+	margin: 0px 10px 0px 0px;
+}
+.logo-header__img img {
+	max-width: 100%;
+	object-fit: contain;
+}
+.logo-header__title {
+	color: var(--second-color);
+	font-size: 20px;
+}
+/* ---------------------------------- */
+
+.header__utility {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header__utility .header__info-block:not(:last-child) {
+	margin-right: 30px;
+}
+.header__info-block {
+}
+/* ---------------------------------- */
+.info-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.info-block__img {
+	margin: 0px 10px 0px 0px;
+	height: 20px;
+	width: 20px;
+}
+.info-block__img img {
+	max-width: 100%;
+}
+.info-block__title {
+}
+.info-block__info {
+}
+/* ---------------------------------- */
+.btn {
+}
+.menu__body {
+}
+.menu__list {
+}
+.menu__item {
+}
+.menu__link {
+}
+
+/* ---------------------------------- */
