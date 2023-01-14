@@ -1,0 +1,307 @@
+/* * Fonts import */
+/* https://fonts.google.com */
+/* https://webfonts.pro */
+/* https://transfonter.org (ttf to woff, woff2) */
+/* alt+7 */
+/*  &display=swap */
+/*  for cyrillic:    &subset=cyrillic-ex */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@regular,700,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@regular;700;900&display=swap'); */
+
+/* * Fonts local import */
+
+/* * Reset styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+img {
+  vertical-align: top;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 16px; /* default size: 16px*/
+}
+body {
+  line-height: 1; /* default: 1*/
+  font-family: 'Lato', sans-serif;
+  color: #1e212c;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  max-width: 1230px;
+  margin: 0px auto 180px;
+  border: 1px solid transparent;
+}
+
+/* --------------- */
+.section-header__subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0px 0px 8px 0px;
+}
+.section-header__title {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 130%;
+  text-transform: capitalize;
+}
+.section-header_display_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.section {
+  margin: 0px 0px 180px 0px;
+}
+/* --------------- */
+
+.homemain {
+  background: url('../img/circlesmain.png') 0 100% no-repeat,
+    #ff908cdf url('../img/dotsmain.png') 100% 50% no-repeat;
+  /* background-image: url('../img/circlesmain.png'), url('../img/circlesmain.png'); */
+}
+.homemain__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 200px 0px 0px 0px;
+}
+.homemain__btn {
+  padding: 0px 0px 0px 69px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  min-height: 84px;
+  margin: 0px 0px 24px 0px;
+  cursor: pointer;
+  background: url('../img/hover.png') -15px 50% / 84px no-repeat;
+}
+.homemain__title {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 130%;
+  letter-spacing: 1px;
+  max-width: 500px;
+  margin: 0px 0px 60px 0px;
+}
+.homemain__btns > .btn.btn_color_orange {
+  margin: 0px 0px 0px 24px;
+}
+
+.whoweare {
+  background: url('../img/circles.png') 100% 100% no-repeat;
+}
+.whoweare .section-header {
+  margin: 0px 0px 40px 0px;
+}
+.whoweare__container {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.whoweare__image {
+  max-width: 705px;
+  margin: 0px 135px 0px 0px;
+}
+.whoweare__image > img {
+  max-width: 100%;
+}
+.whoweare__content {
+  max-width: 390px;
+}
+.whoweare__list {
+  margin: 0px 0px 22px 0px;
+}
+.list__item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #424551;
+  margin: 0px 0px 12px 0px;
+  padding: 0px 0px 0px 32px;
+
+  background: url('../img/listicon.svg') 0 5px/16px no-repeat;
+}
+
+.btn {
+  border: 1px solid #ff3f3a;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #ff3f3a;
+  background-color: unset;
+  padding: 0px 40px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.btn:hover {
+  background-color: #f75e05;
+  border: 1px solid #f75e05;
+  color: #fff;
+}
+.btn_color_orange {
+  background-color: #ff3f3a;
+  color: #fff;
+}
+
+.readytolearn {
+  background: url('../img/dots.png') 0 60px no-repeat;
+}
+
+.readytolearn .section-header {
+  margin: 0px 0px 60px 0px;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e8ed;
+  border-radius: 6px;
+  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08),
+    0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  max-width: 390px;
+  margin: 0px 30px 30px 0px;
+  overflow: hidden;
+}
+.card.card_size_n:nth-of-type(3n) {
+  margin: 0px 0px 30px 0px;
+}
+.card.card_size_l {
+  display: flex;
+  max-width: 600px;
+}
+.card.card_size_l:nth-of-type(2n) {
+  margin: 0px 0px 30px 0px;
+}
+.card.card_size_l .card__image {
+  max-width: 214px;
+}
+.card.card_size_l .card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card.card_size_n .card__image img {
+  width: 100%;
+  /* max-height: 240px; */
+  object-fit: contain;
+}
+.card .card__content {
+  padding: 24px;
+  max-width: 342px;
+}
+.card__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: #1e212c;
+  margin: 0px 0px 20px 0px;
+}
+.card__price {
+  color: #ff4242;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+}
+.card__author {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #787a80;
+}
+.card__mark {
+  background-color: #fff;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  display: inline-block;
+  padding: 1px 8px;
+  margin: 0px 0px 20px 0px;
+}
+.card__mark_color_info {
+  background-color: #5a87fc;
+}
+.card__mark_color_success {
+  background-color: #03cea4;
+}
+.card__mark_color_warning {
+  background-color: #f89828;
+}
+.card__mark_color_purple {
+  background-color: #f52f6e;
+}
+
+.getcontact__container {
+  margin: 0px 120px 0px 0px;
+  padding: 10px;
+  background: url('../img/paralaximage.jpg') 0 0 / cover no-repeat fixed;
+}
+.getcontact__content .section-header__title {
+  margin: 0px 0px 110px 0px;
+}
+
+.getcontact__item {
+  margin: 0px 0px 30px 0px;
+  padding: 0px 0px 0px 100px;
+  min-height: 70px;
+}
+.getcontact__item > a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 135%;
+}
+.getcontact__item * {
+  color: #486a6f;
+}
+.getcontact__item_special_tel {
+  background: url('../img/telgetcontact.jpg') 0 0 no-repeat;
+}
+.getcontact__item_special_mail {
+  background: url('../img/mailgetcontact.png') 0 0 no-repeat;
+}
+.item__subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 200%;
+}
