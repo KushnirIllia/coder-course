@@ -128,7 +128,8 @@ body {
 .header__utility .header__info-block:not(:last-child) {
 	margin-right: 30px;
 }
-.header__info-block {
+.header__utility .header__info-block:first-child {
+	margin-left: 30px;
 }
 /* ---------------------------------- */
 .info-block {
@@ -136,6 +137,7 @@ body {
 	justify-content: center;
 	align-items: flex-start;
 }
+
 .info-block__img {
 	margin: 0px 10px 0px 0px;
 	height: 25px;
@@ -162,7 +164,6 @@ body {
 	display: inline-block;
 	padding: 12px 50px 12px 15px;
 	background-color: var(--third-color);
-
 	cursor: pointer;
 	position: relative;
 }
@@ -193,17 +194,109 @@ body {
 	right: 10px;
 	width: 20px;
 	height: 20px;
+	transition: transform 0.3s ease 0s;
 	transform: translate3d(0px, -50%, 0px);
-	background: url('../img/common/btn.svg') 50% 50% / cover no-repeat;
+	background: url("../img/common/btn.svg") 50% 50% / cover no-repeat;
+}
+.btn:hover::after {
+	transform: translate3d(5px, -50%, 0px);
 }
 /* ---------------------------------- */
 .menu__body {
+	background-color: var(--second-color);
+	padding: 10px 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0px 0px 26px 0px;
 }
 .menu__list {
+	flex: 0 1 556px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 40px 0px 0px;
+	row-gap: 10px;
+	flex-wrap: wrap;
 }
 .menu__item {
+	position: relative;
+	transition: background 0.3s ease 0s;
+}
+/* .menu__item:not(:last-child) {
+	margin-right: 30px;
+} */
+.menu__item:hover,
+.menu__utility > *:hover {
+	background: rgba(2, 19, 60, 0.1);
+}
+.menu__item:hover .menu__link.menu__link_has_dropmenu::after {
+	transform: rotate(360deg);
+}
+
+.menu__link {
+	padding: 8px 4px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 22px;
+	text-transform: capitalize;
+	text-align: center;
+	letter-spacing: 0.15px;
+	color: var(--main-color);
+	display: inline-block;
+	height: 100%;
+	min-width: 60px;
 }
 .menu__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.menu__link.menu__link_has_dropmenu::after {
+	content: "";
+	background: url("../img/header/03.svg") center center / contain no-repeat;
+	width: 16px;
+	height: 16px;
+	margin: 0px 0px 0px 4px;
+	transition: transform 0.4s ease 0s;
+}
+
+.menu__utility {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.menu__utility > * {
+	background-color: unset;
+	cursor: pointer;
+	height: 100%;
+	padding: 4px;
+	transition: background 0.3s ease 0s;
+}
+.menu__utility > *:not(:last-child) {
+	margin-right: 22px;
+}
+.cart-menu {
+	position: relative;
+}
+.cart-menu__counter {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	transform: translate3d(20%, -20%, 0px);
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	font-weight: 500;
+	font-size: 10px;
+	color: var(--second-color);
+	line-height: 16px;
+	letter-spacing: 0.15px;
+	text-align: center;
+	background-color: var(--third-color);
 }
 
 /* ---------------------------------- */
