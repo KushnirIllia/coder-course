@@ -79,6 +79,11 @@ body {
 	--second-title-size-19: 19px;
 	--second-title-line-height-26: 26px;
 }
+
+main.main {
+	padding: 200px 0px 0px 0px;
+}
+
 /* ---------------------------------- */
 .header {
 	position: fixed;
@@ -86,20 +91,17 @@ body {
 	top: 0;
 	left: 0;
 	background-color: #2f2f35;
-}
-.header__menu {
-}
-.menu {
+	z-index: 1000;
 }
 .header__upper {
 	padding: 26px 0px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	column-gap: 40px;
 }
 /* ---------------------------------- */
-.header__logo {
-}
+
 .logo-header {
 	display: flex;
 	justify-content: center;
@@ -128,9 +130,6 @@ body {
 .header__utility .header__info-block:not(:last-child) {
 	margin-right: 30px;
 }
-.header__utility .header__info-block:first-child {
-	margin-left: 30px;
-}
 /* ---------------------------------- */
 .info-block {
 	display: flex;
@@ -140,12 +139,12 @@ body {
 
 .info-block__img {
 	margin: 0px 10px 0px 0px;
-	height: 25px;
-	width: 25px;
+	/* height: 25px; */
+	/* width: 25px; */
+	flex: 0 1 25px;
 }
 .info-block__img img {
-	width: 100%;
-	object-fit: contain;
+	max-width: 100%;
 }
 .info-block__content {
 	color: var(--second-color);
@@ -300,3 +299,96 @@ body {
 }
 
 /* ---------------------------------- */
+
+.ourimpact {
+	margin: 200px 0px 0px 0px;
+	padding: 0px 0px 212px 0px;
+	background: #29c3be url("../img/ourimpact/bg.png") 85% 0 no-repeat;
+}
+.ourimpact__container {
+}
+.ourimpact__header {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin: 0px 0px 80px 0px;
+	column-gap: 40px;
+}
+.ourimpact__content {
+	flex: 1 1 411px;
+	margin: 112px 0px 0px 0px;
+}
+.ourimpact__tag {
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	color: var(--second-color);
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: left;
+	position: relative;
+	padding: 0px 0px 0px 32px;
+	margin: 0px 0px 32px 0px;
+}
+.ourimpact__tag::before {
+	content: "";
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	top: 50%;
+	left: 0;
+	transform: translate3d(0%, -50%, 0px);
+	background: url("../img/common/mark.svg") center center no-repeat;
+}
+.ourimpact__title {
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 42px;
+	color: var(--second-color);
+}
+.ourimpact__img {
+	margin: -80px 0px 0px 0px;
+	flex: 0 1 500px;
+}
+.ourimpact__img img {
+	max-width: 100%;
+	border-radius: 40px;
+}
+
+.ourimpact__info-blocks {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+.ourimpact__info-block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.info-block-ourimpact__img {
+	margin: 0px 10px 0px 0px;
+	flex: 0 1 76px;
+}
+.info-block-ourimpact__img img {
+	max-width: 100%;
+}
+
+.info-block-ourimpact__content {
+}
+.info-block-ourimpact__counter {
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 42px;
+	color: var(--second-color);
+	margin: 0px 0px 4px 0px;
+}
+.info-block-ourimpact__subtitle {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.15px;
+	color: #5d62b5;
+}
