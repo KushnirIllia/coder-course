@@ -215,7 +215,7 @@ main.main {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0px 40px 0px 0px;
-	row-gap: 10px;
+	gap: 10px;
 	flex-wrap: wrap;
 }
 .menu__item {
@@ -305,11 +305,10 @@ main.main {
 	padding: 0px 0px 212px 0px;
 	background: #29c3be url("../img/ourimpact/bg.png") 85% 0 no-repeat;
 }
-.ourimpact__container {
-}
+
 .ourimpact__header {
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	justify-content: space-between;
 	margin: 0px 0px 80px 0px;
 	column-gap: 40px;
@@ -374,9 +373,6 @@ main.main {
 }
 .info-block-ourimpact__img img {
 	max-width: 100%;
-}
-
-.info-block-ourimpact__content {
 }
 .info-block-ourimpact__counter {
 	font-weight: 900;
