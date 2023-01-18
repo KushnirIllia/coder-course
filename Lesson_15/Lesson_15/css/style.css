@@ -1,0 +1,136 @@
+/* * Fonts import */
+/* https://fonts.google.com */
+/* https://webfonts.pro */
+/* https://transfonter.org (ttf to woff, woff2) */
+
+/*  &display=swap */
+/*  for cyrillic:    &subset=cyrillic-ex */
+@import url('https://fonts.googleapis.com/css?family=Roboto:regular,500,700,900&display=swap');
+/* * Fonts local import */
+
+/* * Icons Fonts */
+/* https://www.iconfinder.com/ */
+/* https://icomoon.io */
+
+/* * Reset styles */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* default size: 16px*/
+}
+body {
+	line-height: 1; /* default: 1*/
+	font-family: 'Roboto';
+	color: #4b4b4b;
+	/* background-color: #303030; */
+	/* font-size */
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+[class*='__container'] {
+	max-width: 1020px;
+	margin: 0px auto;
+}
+
+/* ---------------------------------- */
+
+.promise {
+}
+.promise__container {
+}
+.promise__header {
+	margin: 0px 0px 68px 0px;
+}
+
+.header-titles > *:not(:last-child) {
+	margin-bottom: 33px;
+}
+
+.header-titles__label {
+	padding: 0px 0px 0px 35px;
+	background: url('../img/title-icon.svg') 0 -2px no-repeat;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 2;
+	color: #5d62b5;
+}
+.header-titles__title {
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 1.16;
+	color: #000;
+}
+.promise__items {
+	display: flex;
+	margin: 0px -12px;
+	flex-wrap: wrap;
+}
+.promise__item {
+	flex: 0 0 33.333%;
+	padding: 0px 12px;
+	column-gap: 23px;
+}
+.item-promise {
+	display: flex;
+	align-items: flex-start;
+}
+.item-promise__icon {
+	flex: 0 0 63px;
+}
+.item-promise__title {
+	font-weight: 900;
+	font-size: 19px;
+	line-height: 1.37;
+	color: #f2726f;
+}
+.item-promise__title:not(:last-child) {
+	margin-bottom: 20px;
+}
+.item-promise__text {
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.15px;
+}
