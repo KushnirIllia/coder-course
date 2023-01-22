@@ -1,0 +1,336 @@
+/* * Fonts import */
+/* https://fonts.google.com */
+/* https://webfonts.pro */
+/* https://transfonter.org (ttf to woff, woff2) */
+
+/*  &display=swap */
+/*  for cyrillic:    &subset=cyrillic-ex */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+/* * Fonts local import */
+
+/* * Reset styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+img {
+  vertical-align: top;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 16px; /* default size: 16px*/
+}
+body {
+  line-height: 1; /* default: 1*/
+  /* font-family, color */
+  /* font-size */
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+/* --------------- */
+
+.article {
+  padding: 71px 0;
+}
+.article__content {
+  max-width: 1230px;
+  margin: 0px auto;
+  white-space: nowrap;
+}
+.article__image {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  max-width: 500px;
+  /* max-width: 30%; */
+  margin: 0px 135px 0px 0px;
+}
+
+.article__image::before {
+  content: '';
+  width: 100%;
+  height: calc(100% - 20px);
+  display: inline-block;
+  background-color: #000;
+  opacity: 0.4;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  border-radius: 3px;
+}
+.article__image::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #fff;
+  border-radius: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  cursor: pointer;
+}
+
+.article__image > img {
+  width: 100%;
+  height: auto;
+}
+.article__body {
+  display: inline-block;
+  max-width: 600px;
+  white-space: normal;
+}
+.article__body > *:not(:last-child) {
+  margin: 0px 0px 32px 0px;
+}
+
+.article__label {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #1e212c;
+
+  margin: 0px 0px 8px 0px;
+}
+.article__title {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 130%;
+  color: #1e212c;
+  margin: 0px 0px 16px 0px;
+}
+.article__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #787a80;
+}
+.article-list li:not(:last-child) {
+  margin-bottom: 4px;
+}
+.article-list li.article-list__item {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  display: flex;
+  align-items: center;
+  color: #424551;
+}
+.article-list li::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: 0px 8px 0px 0px;
+}
+.article-list li:first-child {
+  background: url('../img/icons/star.svg') 0 5.5px / 16px no-repeat;
+}
+.article-list li:nth-child(2) {
+  background: url('../img/icons/play.svg') 0 5.5px / 16px no-repeat;
+}
+.article-list li:nth-child(3) {
+  background: url('../img/icons/profile.svg') 0 5.5px / 16px no-repeat;
+}
+
+.article__text {
+  max-width: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #424551;
+}
+.article__social-links {
+  display: inline-block;
+}
+.social-links__item {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #c3c3c3;
+  border: 1px solid transparent;
+}
+.social-links__item > img {
+  max-width: 100%;
+}
+.social-links__item:not(:last-child) {
+  margin-right: 24px;
+}
+
+/* .social-links__item:hover {
+  opacity: 0.8;
+  border: 1px solid #000;
+  box-shadow: 4px 4px 5px 0px rgb(0 0 0 / 75%);
+} */
+
+.social-links__item a {
+  display: inline-block;
+  padding: 10px;
+}
+a.link:visited {
+  color: blanchedalmond;
+}
+
+a.link-special {
+  font-size: 24px;
+  line-height: 120%;
+  color: #1e212c;
+  /* transition: all 0.2s ease; */
+}
+
+a.link-special:visited {
+  color: #77608d;
+}
+a.link-special:hover {
+  color: #787a80;
+}
+a.link-special:focus {
+  outline: 1px solid #77608d;
+}
+a.link-special:active {
+  color: #c3c3c3;
+}
+
+.info > p.info__text:first-of-type {
+  text-indent: 10px;
+  letter-spacing: 1px;
+  background-color: rgb(200, 136, 136);
+}
+.info__text {
+  display: inline-block;
+  line-height: 120%;
+  /* margin-bottom: 20px; */
+}
+.info__text::selection {
+  background-color: #77608d;
+  color: #fff;
+}
+.info > p.info__text:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+p.info__text:nth-child(odd)::after {
+  content: '';
+  background-color: #77608d;
+}
+
+/* ------ */
+.navbar {
+  display: block;
+  margin-bottom: 20px;
+  background-color: #a78bc1;
+  border-radius: 10px;
+  padding: 20px;
+}
+.navbar .navbar__item {
+  display: inline-block;
+}
+.navbar .navbar__item a {
+  color: #5b496c;
+}
+.navbar .navbar__item:first-child a {
+  color: #77608dce;
+}
+.navbar .navbar__item:nth-child(2) a {
+  color: #705986;
+}
+.navbar__item > a {
+  display: inline-block;
+  padding: 8px 5px;
+}
+.navbar__item:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #77608d;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.paragraph {
+  background-color: #c3f776;
+  padding: 10px;
+}
+.paragraph p {
+  width: 600px;
+  display: block;
+  margin: 0px auto;
+}
+.paragraph p::before {
+  content: 'Початок:';
+  color: red;
+}
+
+.paragraph p::after {
+  content: ':Кінець';
+  color: red;
+}
+.num-list {
+  counter-reset: item;
+}
+.num-list li::before {
+  counter-increment: item;
+  content: counter(item) ")";
+  display: inline-block;
+  vertical-align: top;
+  margin: 0px 10px 0px 0px;
+  color: red;
+}
+/* .paragraph p::first-line {
+} */
+.paragraph *:not(:last-child) {
+  margin-bottom: 20px;
+}
+.input {
+  line-height: 100%;
+  padding: 4px 4px 4px 10px;
+  vertical-align: middle;
+}
+/* 
+.input:focus {
+  color: green;
+} */
+.input:nth-of-type(2):focus {
+  outline: 2px solid rgb(211, 123, 82);
+  box-shadow: 0px 0px 7px 1px rgb(211, 123, 82);
+}
+.input:last-of-type:focus {
+  width: 500px;
+  outline: none;
+}
