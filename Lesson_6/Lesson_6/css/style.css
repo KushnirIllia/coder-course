@@ -1,0 +1,169 @@
+/* * Fonts import */
+/* https://fonts.google.com */
+/* https://webfonts.pro */
+/* https://transfonter.org (ttf to woff, woff2) */
+
+/*  &display=swap */
+/*  for cyrillic:    &subset=cyrillic-ex */
+
+/* * Fonts local import */
+
+/* * Reset styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+img {
+  vertical-align: top;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 16px; /* default size: 16px*/
+}
+body {
+  line-height: 1; /* default: 1*/
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  padding: 20px;
+}
+/* --------------- */
+
+.block {
+  margin: 0px 0px 20px 0px;
+  padding: 10px 20px;
+  background-color: #77608d;
+  /*width: 200px;
+  padding: 10px; */
+}
+.inline {
+  /* display: inline-block;
+  background-color: #794f45;
+  line-height: 180%; */
+}
+.text-link {
+  /* font-size: 35px;
+  color: #000;
+  border: 1px dashed; 
+  display: inline-block; */
+}
+/*
+border <-- (наслідується від color)
+Универсальное свойство border позволяет одновременно 
+установить толщину, 
+стиль и цвет границы вокруг элемента.
+border: 1px solid #000; (размер стиль цвет)
+Основные стили - solid dotted dashed double
+
+Синтаксис общего свойства:
+border: толщина_линии стиль_линии цвет_линии (transparent - без кольору)
+
+*/
+.block {
+  /* border: 10px solid #000; */
+}
+.inline {
+  /* border: 1px solid #000; */
+}
+
+/*
+outline
+Универсальное свойство, одновременно устанавливающее цвет, 
+стиль и толщину внешней границы на всех четырех сторонах элемента. 
+В отличие от линии, задаваемой через border, свойство outline 
+не влияет на положение блока и его ширину. 
+Также нельзя задать параметры линии на отдельных сторонах элемента, 
+outline применяется сразу ко всем четырём сторонам.
+*/
+
+.block {
+  /* outline: 5px solid #77608d; */
+}
+.inline {
+  /* margin: 20px 0px 0px 0px;
+  outline: 5px solid #77608d; */
+}
+.inline:hover {
+  /* outline: 1px solid #777; */
+}
+
+/*
+border-radius
+Устанавливает радиус скругления уголков блока.
+border-radius:50%; - кргуг
+Можно использовать вместе с overflow: hidden;
+*/
+
+.block {
+  /* width: 300px;
+  background-color: #794f45;
+  border-radius: 10px 50px 10px 5px;
+  border-radius: 30% 70% 70% 30% / 51% 30% 70% 49%;
+  border-radius: 50%;
+ */
+}
+
+/*
+box-shadow
+Добавляет тень к элементу.
+box-shadow: сдвиг_по_гориз сдвиг_по_верт радиус расстояние
+Флаг - inset -  для установки внутренней тени
+Можно добавить много теней. На тень влияет свойство border-radius.
+filter: drop-shadow(0px 0px 10px #77608d);
+*/
+
+/*
+opacity
+Определяет уровень прозрачности элемента.
+Отличие opacity:0; от display:none; в том что блок 
+не убирается из верстки а только становиться прозрачным, 
+то есть занимаемое им место остается. Так же, 
+с прозрачными элементами все еще можно взаимодействовать, 
+например кликать по ссылкам.
+*/
+
+/*
+visibility
+Предназначен для отображения или скрытия элемента.
+Отличие visibility: hidden; от display:none; в том что блок 
+не убирается из верстки а только скрывается, 
+то есть занимаемое им место остается.
+Отличие visibility: hidden; от opacity:0;
+в том что блок скрывается и взаимодействовать с ним нельзя.
+*/
+
+.block {
+  /* 
+  border-radius: 10px 10px 10px 10px; */
+  background-color: #77608d;
+  /* opacity: 0; */
+  visibility: visible;
+  box-shadow: 0px 0px 15px 10px #794f45;
+}
