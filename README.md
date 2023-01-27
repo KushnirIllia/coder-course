@@ -44,3 +44,6 @@ animation/transition -name, animation/transition -duration, animation/transition
 Learning display flex and flex properties.
 
 justify-content, align-items, flex-direction
+
+## Lesson_15
+Practicing flex
