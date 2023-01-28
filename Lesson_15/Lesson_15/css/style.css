@@ -101,11 +101,18 @@ body {
 	line-height: 2;
 	color: #5d62b5;
 }
+.header-titles__label_white {
+	color: #fff;
+	background: url('../img/title-icon_white.svg') 0 -2px no-repeat;
+}
 .header-titles__title {
 	font-weight: 900;
 	font-size: 36px;
 	line-height: 1.16;
 	color: #000;
+}
+.header-titles__title_white {
+	color: #fff;
 }
 .promise__items {
 	display: flex;
@@ -207,6 +214,10 @@ body {
 	margin-bottom: 20px;
 }
 .item-services__text {
+	flex: 1 1 auto;
+}
+.item-services__text:not(:last-child) {
+	margin-bottom: 20px;
 }
 
 .services__btn {
@@ -217,7 +228,7 @@ body {
 	min-height: 48px; */
 
 	border-radius: 8px;
-
+	cursor: pointer;
 	background: #f2726f;
 	text-align: center;
 	color: #fff;
@@ -227,4 +238,95 @@ body {
 	font-size: 12px;
 	line-height: 2;
 	padding: 12px 25px;
+}
+
+.item-services__link {
+	color: #f2726f;
+}
+
+/* ---------------------------------- */
+.impact {
+	padding: 20px 0px 212px 0px;
+	position: relative;
+	background-color: #29c3be;
+}
+.impact::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	transform: translate3d(88%, 0px, 0px);
+	background: url('../img/mainpage/impact/decor.svg') 0 0 no-repeat;
+	height: 278px;
+	width: 670px;
+}
+.impact__container {
+	position: relative;
+}
+.impact__body {
+	display: flex;
+	align-items: flex-end;
+	margin: 0px -15px;
+}
+.impact__body:not(:last-child) {
+	margin-bottom: 80px;
+}
+.impact__content {
+	flex: 0 0 50%;
+	padding: 0px 15px;
+}
+.impact__image {
+	flex: 0 0 50%;
+	padding: 0px 15px;
+	margin: -100px 0px 0px 0px;
+}
+.impact__image img {
+	max-width: 100%;
+	border-radius: 40px;
+}
+.impact__header {
+	max-width: 420px;
+}
+
+.impact__items {
+	display: flex;
+	row-gap: 24px;
+	margin: 0px -12px;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+.impact__item {
+	flex: 0 1 25%;
+	padding: 0px 12px;
+	min-width: 237px;
+}
+.item-impact {
+	display: flex;
+	align-items: flex-start;
+	column-gap: 11px;
+}
+.item-impact__icon {
+	flex: 0 0 76px;
+}
+.item-impact__body {
+	align-self: center;
+}
+.item-impact__value {
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 1.17;
+	color: #fff;
+}
+.item-impact__value:not(:last-child) {
+	margin-bottom: 3px;
+}
+.item-impact__text {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.15px;
+	color: #5d62b5;
+}
+.item-impact__text:not(:last-child) {
+	margin-bottom: 3px;
 }
