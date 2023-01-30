@@ -5,9 +5,9 @@
 
 /*  &display=swap */
 /*  for cyrillic:    &subset=cyrillic-ex */
-
+@import url('https://fonts.googleapis.com/css?family=Poppins:regular,700,900');
 /* * Fonts local import */
-@font-face {
+/* @font-face {
 	font-family: 'Helvetica';
 	src: url('../fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),
 		url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff');
@@ -32,7 +32,7 @@
 	font-weight: 900;
 	font-style: normal;
 	font-display: swap;
-}
+} */
 
 /* * Icons Fonts */
 /* https://www.iconfinder.com/ */
@@ -79,7 +79,7 @@ html {
 body {
 	line-height: 1; /* default: 1*/
 	background-color: #191919;
-	font-family: 'Helvetica';
+	font-family: 'Poppins';
 	font-weight: 400;
 	/* color */
 }
@@ -97,19 +97,43 @@ body {
 [class*='__container'] {
 	max-width: 1110px;
 	margin: 0px auto;
+	padding: 0px 15px;
 }
-
+section:not(:last-child) {
+	margin-bottom: 30px;
+}
 /* ---------------------------------- */
 
 .section-header {
-	padding: 60px 0px 30px 0px;
+	padding: 60px 0px 0px 0px;
+}
+.section-header:not(:last-child) {
+	margin-bottom: 30px;
 }
 .section-header__content {
 	position: relative;
+	padding: 30px 0px;
+}
+.section-header__content::before {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	width: 5em;
+	height: 2px;
+	bottom: 0;
+	left: 50%;
+	transform: translate3d(-50%, 0px, 0px);
+	background-color: #34c759;
 }
 .section-header__decor-title {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -40%, 0px);
 	font-weight: 900;
-	font-size: 100px;
+	font-size: 6em;
 	line-height: 1.5;
 	text-align: center;
 	letter-spacing: 0.2em;
@@ -117,12 +141,7 @@ body {
 	text-transform: uppercase;
 }
 .section-header__title {
-	position: absolute;
-	width: 100%;
-	display: block;
-	top: 50%;
-	left: 50%;
-	transform: translate3d(-50%, -50%, 0px);
+	position: relative;
 	font-size: 36px;
 	line-height: 2.5;
 	text-align: center;
@@ -130,6 +149,86 @@ body {
 	text-transform: capitalize;
 	color: #d9d9d9;
 	white-space: nowrap;
+	z-index: 1;
 }
 
 /* ---------------------------------- */
+
+.chefs {
+}
+.chefs__container {
+}
+.chefs__items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0px -15px;
+	row-gap: 30px;
+}
+.chefs__item {
+	flex: 0 1 33.333%;
+	min-width: 350px;
+	padding: 0px 15px;
+}
+.item-chefs {
+}
+.item-chefs__header {
+	display: flex;
+	align-items: center;
+	column-gap: 24px;
+}
+.item-chefs__header:not(:last-child) {
+	margin-bottom: 24px;
+}
+.item-chefs__image {
+	flex: 0 0 65px;
+	height: 65px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+.item-chefs__image img {
+	max-width: 100%;
+	height: 65px;
+	border-radius: 50%;
+}
+.item-chefs__titles {
+	flex: 1 1 auto;
+}
+.item-chefs__title {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 116.666667%; /* 21/18 */
+	letter-spacing: -0.225px;
+	color: #fff;
+}
+.item-chefs__title:not(:last-child) {
+	margin-bottom: 6px;
+}
+.item-chefs__label {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 133.333333%; /* 16/12 */
+	letter-spacing: -0.15px;
+	color: #ffffff80;
+}
+.item-chefs__body {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -15px;
+	row-gap: 30px;
+}
+.item-chefs__part {
+	flex: 0 0 95px;
+	padding: 0px 15px;
+	height: 65px;
+	display: flex;
+}
+.item-chefs__part img {
+	max-width: 100%;
+	max-height: 65px;
+	border-radius: 4px;
+}
+.item-chefs__part_main {
+	flex: 0 0 160px;
+}
