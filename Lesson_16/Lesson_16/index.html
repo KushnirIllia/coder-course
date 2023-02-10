@@ -1,18 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>TITLE</title>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>TITLE</title>
+	</head>
 
-  <body>
-    <div class="wrapper">
-      <header class="header"></header>
-      <main class="main"></main>
-      <footer class="footer"></footer>
-    </div>
-  </body>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="main">
+				<!-- action - отримувач -->
+				<!-- method - метод передачі данних, 
+          get - передається в адресні строчці
+          post - приховує дані
+        -->
+				<!-- enctype - тип данних  -->
+				<form action="#" method="get" class="form">
+					<!-- - disabled не активне -->
+
+					<input
+						name="username"
+						value=""
+						type="text"
+						placeholder="Enter your name"
+						autocomplete="off"
+						required
+					/>
+					<!-- number -->
+					<input
+						name="number"
+						value=""
+						type="number"
+						placeholder="Enter your number"
+						required
+					/>
+
+					<!-- tel -->
+					<input
+						name="phone"
+						value=""
+						type="tel"
+						placeholder="Enter your phone"
+						required
+					/>
+
+					<!-- email -->
+					<input
+						name="email"
+						value=""
+						type="email"
+						placeholder="Enter your email"
+						required
+						disabled
+					/>
+
+					<!-- date -->
+					<input
+						name="date"
+						value=""
+						type="date"
+						placeholder="Enter your date"
+						required
+					/>
+
+					<!-- checkbox -->
+					<input name="holiday" value="yes" type="checkbox" required />
+					<!-- <label for="holiday">holiday</label> -->
+					<div>
+						<!-- radio -->
+						<input name="gender" value="man" type="radio" required />M
+						<input name="gender" value="woman" type="radio" required checked />W
+						<input name="gender" value="others" type="radio" required />Others
+					</div>
+				</form>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
 </html>

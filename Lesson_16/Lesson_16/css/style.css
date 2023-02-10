@@ -62,15 +62,22 @@ body {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	padding: 15px;
 }
 
 .main {
 	flex: 1 1 auto;
 }
 
-[class*="__container"] {
-  /* max-width: 1200px; */
-  margin: 0px auto;
+[class*='__container'] {
+	max-width: 1200px;
+	margin: 0px auto;
 }
 
 /* ---------------------------------- */
+input {
+	padding: 4px 6px;
+}
+[disabled] {
+	background-color: #77608d;
+}
